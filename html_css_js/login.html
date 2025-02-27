@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="text/html, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+            background-image: url(images/background_sbi.jpeg);
+            color: white;
+        }
+
+        header {
+            background-color: #292075;
+            color: white;
+            height: 9vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        h2{
+            margin: auto;
+            font-family:monospace;
+        }
+
+        header img {
+            height: 57px;
+            width: 100px;
+            position: relative;
+            right: 92vw;
+        }
+
+        .formDiv
+        {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width: 50vw;
+            margin: auto;
+            border-radius: 10px;
+            background-color: #00b5ef;
+            height: 80vh;
+        }
+
+        .formElements input{
+            margin: 20px 0;
+            margin-left: 40px;
+            text-align: center;
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px;
+            border: none;
+            height: 20px;
+        }
+
+        #accnum{
+            position: relative;
+            left: 48px;
+        }
+
+         #pass{
+            position: relative;
+            left: 90px;
+         }
+
+         #login{
+            position: relative;
+            left: 90px;
+            height: 25px;
+            width: 50px;
+         }
+         a{
+            text-decoration: none;
+            color: #292075;
+            margin-left: 100px;
+         }
+    
+        footer {
+            /* background-color: #00b5ef; */
+            height: 4vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 600px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <img src="sbilogo.avif" alt="">
+    </header>
+    <h2>User Driven Login - Existing User</h2>
+
+    <div class="formDiv">
+        <form action="login" method="post" class="formElements">
+            <h3>All fields are mandatory</h3><br>
+            <span>Account Number</span><input type="number" name="accountNumber" id="accnum" required><br>
+            <span>Password</span> <input type="password" name="password" id="pass" required><br>
+            <input type="submit" value="Login" id="login"><br>
+            <a href="passwordReset.html">ForgotPassword?</a>
+        </form>
+    </div>
+
+    <footer>
+        <p>© Copyright State Bank of India (APM Id : Webs_Info_875)</p>
+        <p>Site best viewed at 1024 x 768 resolution in Microsoft Edge 79+, Mozilla 96+, Google Chrome 97+</p>
+    </footer>
+</body>
+
+</html>

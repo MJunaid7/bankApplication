@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .profileMenu {
+            position: absolute;
+            height: 0vh;
+            width: 22vw;
+            background-color: #292075;
+            border-bottom-right-radius: 10px;
+            margin-left: 78vw;
+            margin-top: 57px;
+            transition: .3s linear;
+            overflow: hidden;
+            color: white;
+
+        }
+
+        .profileMenu .profileDetails {
+            margin-top: 7vh;
+            display: block;
+            justify-content: flex-start;
+            align-content: space-evenly;
+            padding-left: 10px;
+        }
+
+        .profileimg {
+            height: 32px;
+            width: 35px;
+            position: relative;
+            top: 15px;
+            left: 50px;
+        }
+
+        #profileSpan {
+            position: relative;
+            left: 72px;
+            font-size: larger;
+            top: 10px;
+        }
+
+
+        .sidebar {
+            height: 40.5vh;
+            width: 17vw;
+            background-color: #292075;
+            position: absolute;
+            margin-top: 57px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .sidebar ul li {
+            list-style: none;
+            margin: 1vh 0;
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: larger;
+            font-family: sans-serif;
+
+        }
+
+        .sidebutton {
+            background: none;
+            border: none;
+            color: white;
+            font-size: larger;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #00b5ef;
+            transition: 0.3s linear;
+        }
+
+        .socialSideBar {
+            height: 91vh;
+            width: 0vw;
+            background-color: rgb(240, 239, 239);
+            position: absolute;
+            margin-left: 95vw;
+            top: 9vh;
+            display: inline;
+            overflow: hidden;
+            transition: .1s linear;
+        }
+
+        .socialSideBar img {
+            height: 50px;
+            width: 50px;
+            margin-top: 8vh;
+            margin-left: .7vw;
+        }
+
+
+
+        nav {
+            background-color: white;
+            color: #292075;
+            height: 9vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #292075;
+            font-weight: bold;
+
+        }
+
+        .links {
+            position: relative;
+            left: 60px;
+        }
+
+        nav img {
+            height: 51px;
+            width: 100px;
+            position: relative;
+            right: 87vw;
+        }
+
+        .options {
+            margin-left: 228px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #00b5ef;
+        }
+
+        .options img {
+            height: 200px;
+            width: 200px;
+            border: 2px solid #292075;
+            margin-top: 20px;
+            border-radius: 3px;
+        }
+
+        .options img:hover {
+            cursor: pointer;
+            border-radius: 20px;
+            transition-duration: .5s;
+
+        }
+
+        .optionNames {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #00b5ef;
+            padding-top: 10px;
+            margin-left: 228px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .scroll {
+            background-color: #9a3e76;
+            color: white;
+            margin-top: 10px;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+        }
+
+        #text1 {
+            animation: scr linear 10s infinite alternate-reverse;
+        }
+
+        @keyframes scr {
+
+            0% {
+                margin-left: 0vw;
+            }
+
+            100% {
+                margin-left: 50vw;
+            }
+
+        }
+
+        .ads1 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #9a3e76;
+        }
+
+        .ads1 img {
+            height: 30vh;
+            width: 20vw;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+        .ads2 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #9a3e76;
+            padding: 20px 0;
+        }
+
+        .ads2 img {
+            height: 30vh;
+            width: 20vw;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+        .adbanner:hover {
+            transition-duration: .5s;
+            width: 22vw;
+            cursor: pointer;
+        }
+
+        .forms {
+            background-image: url(backgroundSbi.png);
+        }
+
+        .depositeform {
+            background-color: #00b5ef;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 20vw;
+            border-radius: 10px;
+        }
+
+        .depositeform input {
+            margin: 20px;
+            height: 25px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        #amounttextbox {
+            position: relative;
+            left: 22px;
+        }
+
+        #clearbutton1 {
+            position: relative;
+            left: 60px;
+        }
+
+        .transferform {
+            background-color: #00b5ef;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 20vw;
+            border-radius: 10px;
+        }
+
+        .transferform input {
+            margin: 20px;
+            height: 25px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        #amounttextbox2 {
+            position: relative;
+            left: 70px;
+        }
+
+        #sendertextbox {
+            position: relative;
+            left: 12px;
+        }
+
+        #clearbutton2 {
+            position: relative;
+            left: 100px;
+        }
+
+        #transferbutton2 {
+            position: relative;
+            left: 40px;
+        }
+
+        .withdrawform {
+            background-color: #00b5ef;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 20vw;
+            border-radius: 10px;
+        }
+
+        .withdrawform input {
+            margin: 20px;
+            height: 25px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        #accountnumbertextbox {
+            position: relative;
+            left: 8px;
+        }
+
+        #passwordtextbox {
+            position: relative;
+            left: 55px;
+        }
+
+        footer {
+            background-color: #00b5ef;
+            height: 4vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            bottom: 0;
+        }
+
+        .transactionTable{
+            background-color: #00b5ef;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 20vw;
+            border-radius: 10px;
+        }
+        .transactionTable input{
+            margin: 20px;
+            height: 25px;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+
+    <script src="browsing.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="profileMenu" id="profile">
+        <img src="user.png" alt="" class="profileimg"><span id="profileSpan">Profile</span>
+        <div class="profileDetails">
+            <p>Account Holder Name-</p><br>
+            <p>AccountNumber-</p><br>
+            <p>AccountType-</p><br>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><button onclick="profilebaropen()" class="sidebutton">Profile</button></li>
+            <li><a href="register.html">New Registration</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="#transactionForm">Transactions</a></li>
+            <li><button onclick="socialbaropen()" class="sidebutton">Social</button></li>
+        </ul>
+    </div>
+
+    <div class="socialSideBar" id="social">
+
+        <a href="https://wa.me/qr/V3B607MTXCNRK1"><img src="watsapplogo1.webp" alt=""></a>
+        <a href="https://www.facebook.com/shashank.kyatham"><img src="fblogo1.webp" alt=""></a>
+        <a href=""><img src="instalogo1.webp" alt=""></a>
+        <a href=""> <img src="twitterlogo1.webp" alt=""></a>
+        <a href=""><img src="gmaillogo1.webp" alt=""></a>
+
+    </div>
+    <header>
+        <nav>
+            <div class="links">
+                <a href="sbiAboutUs.html">About</a>
+                <a href="home.html">Logout</a>
+            </div>
+            <img src="sbilogo.jpeg" alt="">
+        </nav>
+    </header>
+
+    <div class="options">
+        <a href="#depositeLink"><img src="deposite.jpg" alt=""></a>
+        <a href="#transferLink"><img src="transfer.png" alt=""></a>
+        <a href="#withdrawLink"><img src="withdraw.jpg" alt=""></a>
+    </div>
+    <div class="optionNames">
+        <label for="">DEPOSIT</label>
+        <label for="">TRANSFER</label>
+        <label for="">WITHDRAW</label>
+    </div>
+
+    <div class="scroll">
+        <p id="text1">Never Share your personal details like OTP, Password, AccountNumber, Address to anyone</p>
+    </div>
+
+    <div class="ads1">
+        <img src="ad1.jpeg" alt="" class="adbanner">
+        <img src="ad2.jpg" alt="" class="adbanner">
+        <img src="ad3.jpeg" alt="" class="adbanner">
+    </div>
+    <div class="ads2">
+        <img src="ad4.jpeg" alt="" class="adbanner">
+        <img src="ad5.jpg" alt="" class="adbanner">
+        <img src="ad6.jpeg" alt="" class="adbanner">
+    </div>
+
+    <div class="forms">
+        <div class="depositeform" id="depositeLink">
+            <form action="deposit" method="post">
+                <h3 id="h3deposite">Deposit Portal</h3>
+                <span>Account Number</span> <input type="number" name="accountNumber" required><br>
+                <span>Enter Amount</span> <input type="number" name="depositeAmount" required id="amounttextbox"><br>
+                <input type="submit" value="Deposit"><input type="reset" value="clear" id="clearbutton1">
+            </form>
+        </div>
+
+
+        <div class="transferform" id="transferLink">
+            <form action="transfer" method="post">
+                <h3 id="h3deposite">Transfer Portal</h3>
+                <span>Sender Account Number</span> <input type="number" name="senderAccountNumber" required
+                    id="sendertextbox"><br>
+                <span>Reveiver Account Number</span> <input type="number" name="receiverAccountNumber" required><br>
+                <span>Transfer Amount</span> <input type="number" name="transferAmount" required
+                    id="amounttextbox2"><br>
+                <input type="submit" value="Transfer" id="transferbutton2"><input type="reset" value="clear"
+                    id="clearbutton2">
+            </form>
+        </div>
+
+        <div class="withdrawform" id="withdrawLink">
+            <form action="withdraw" method="post">
+                <h3 id="h3deposite">Withdraw Portal</h3>
+                <span>Account Number</span> <input type="number" name="accountNumber" required
+                    id="accountnumbertextbox"><br>
+                <span>Withdraw Amount</span> <input type="number" name="withdrawAmount" required><br>
+                <span>Password</span> <input type="password" name="password" required id="passwordtextbox"><br>
+                <input type="submit" value="Withdraw" id="withdraw"><input type="reset" value="clear" id="clearbutton3">
+            </form>
+        </div>
+    </div>
+
+    <div class="transactionTable" id="transactionForm">
+        <form action="userTransactions.jsp"  method="post">
+            <span>From Date</span><input type="date"  name="fromDate" required><br>
+            <span>To Date</span> <input type="date" name="toDate" required><br>
+            <span>AccountNumber</span> <input type="number" name="accountNumber"required><br>
+            <input type="submit" value="GetTransactionDetails">
+        </form>
+    </div>
+
+    <footer>
+        <p>© Copyright State Bank of India (APM Id : Webs_Info_875)</p>
+        <p>Site best viewed at 1024 x 768 resolution in Microsoft Edge 79+, Mozilla 96+, Google Chrome 97+</p>
+    </footer>
+
+</body>
+
+</html>

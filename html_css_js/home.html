@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #292075;
+            color: white;
+            height: 9vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav img {
+            height: 57px;
+            width: 100px;
+            position: relative;
+            right: 92vw;
+        }
+
+        .banner {
+            height: 300px;
+            width: 100vw;
+            margin-top: 20px;
+            border-radius: 2px;
+
+            animation: bannerslide 20s infinite ease-in;
+            animation-fill-mode: forwards;
+        }
+
+
+
+
+        @keyframes bannerslide {
+            0% {
+                background-image: url(banner1.jpg);
+            }
+
+            20% {
+                background-image: url(banner1.jpg);
+            }
+
+            40% {
+
+                background-image: url(banner5.jpg);
+
+            }
+
+            60% {
+
+                background-image: url(banner33.jpg);
+
+            }
+
+            80% {
+
+                background-image: url(banner42.jpg);
+
+            }
+
+            100% {
+
+                background-image: url(banner40.jpg);
+
+            }
+
+        }
+
+        .scroll {
+            background-color: #292075;
+            color: white;
+            margin-top: 10px;
+            height: 5vh;
+            overflow: hidden;
+        }
+
+        #text {
+            animation: scr linear 40s infinite;
+        }
+
+        @keyframes scr {
+
+            0% {
+                margin-left: 100vw;
+            }
+
+            100% {
+                margin-left: -200vw;
+            }
+
+        }
+
+
+
+        .social {
+            width: 20vw;
+            margin: 30px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .social img {
+            height: 50px;
+            width: 50px;
+        }
+
+
+        .social img:hover {
+            transition-duration: .5s;
+             padding-top: 50px;
+            height: 65px;
+        }
+
+
+        footer {
+            background-color: #00b5ef;
+            height: 4vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="sbiAboutUs.html">About</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <img src="sbilogo.avif" alt="">
+        </nav>
+    </header>
+
+    <div class="banner"></div>
+
+    <div class="scroll">
+        <p id="text">PPF ACCOUNT OPENING IS NOW AVAILABLE ON YONO - Click here | Mandatory Profile password change after
+            365 days introduced for added security. | Call us toll free on 1800 1234 and 1800 2100 and get a wide range
+            of services through SBI Contact Centre. | SBI never asks for your Card/PIN/OTP/CVV details on phone, message
+            or email. </p>
+    </div>
+
+    <div class="social">
+
+        <div class="logo">
+            <a href=""><img src="fb1.webp" alt=""></a>
+        </div>
+        <div class="logo">
+            <a href=""><img src="insta.webp" alt=""></a>
+        </div>
+        <div class="logo">
+            <a href=""><img src="twitter.webp" alt=""></a>
+        </div>
+        <div class="logo">
+            <a href=""><img src="watsapp.jpg" alt=""></a>
+        </div>
+        <div class="logo">
+            <a href=""><img src="mail.jpg" alt=""></a>
+        </div>
+
+    </div>
+    
+    <footer>
+        <p>© Copyright State Bank of India (APM Id : Webs_Info_875)</p>
+        <p>Site best viewed at 1024 x 768 resolution in Microsoft Edge 79+, Mozilla 96+, Google Chrome 97+</p>
+    </footer>
+
+
+</body>
+
+</html>
